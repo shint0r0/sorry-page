@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Sorry</title>
+</head>
+<body >
+  <div class="container">
+  <div class="center-box">
+    <div class="centre2">
+      <div class="centre3">
+        <div class="images">
+          <img id="imagee" src="Forgive Me Crying GIF by Sappy Seals.gif" alt="" style="width: 250px;">
+        </div>
+        <div class="texts">
+          <div id="words">
+          Aaj wait krane k lie <span class="sry">SORRY</span>. <br>to kya aapne mujhe maaf krdia ??</div>
+        </div>
+        <div class="buttons">
+          <button id="yes-btn"  onclick="changeimage()">Yes</button>
+          <button id="no-btn"  onclick="changeposition()">No</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </div> 
+  <script >
+  let yesBtnClick= document.getElementById("yes-btn");
+  let noBtnClick=document.getElementById("no-btn");
+  
+  let texts=document.getElementById("words");
+  let img=document.getElementById("imagee");
+  function changeimage(){
+    img.src="giphy.gif";
+    texts.innerHTML = "Thank Youuu!!( kya matlab :) new <br> cheez seekhi thi to use krna to bnta h 😋)";
+    yesBtnClick.style.display="none";
+    noBtnClick.style.display="none";
+  }
+  function changeposition(){   
+    noBtnClick.style.position = "absolute";
+    const randomX = Math.random() * (window.innerWidth - 100);
+    const randomY = Math.random() * (window.innerHeight - 50);
+  
+    noBtnClick.style.left = randomX + "px";
+    noBtnClick.style.top = randomY + "px";
+
+  }
+
+</script>
+</body>
+</html>
